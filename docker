@@ -1,0 +1,41 @@
+Docker:是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源
+
+容器：
+镜像：
+仓库：
+
+
+Docker命令: （docker ~ --help 查看具体项）
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+docker create [OPTIONS] IMAGE [COMMAND] [ARG...] 创建容器
+
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...] 运行容器
+OPTIONS:
+  -d:让容器在后台运行，并返回容器ID
+  -P:是容器内部端口随机映射到主机端口
+  -p:是容器内部端口绑定到指定的主机端口
+  --name: 为容器指定一个名称
+
+docker stop [OPTIONS] CONTAINER [CONTAINER...] 停止WEB应用容器
+  -t:Seconds to wait for stop before killing it (default 10)
+
+docker start [OPTIONS] CONTAINER [CONTAINER...] 启动已经停止的容器
+
+docker restart [OPTIONS] CONTAINER [CONTAINER...] 重启动已经停止的容器
+
+docker rm [OPTIONS] CONTAINER [CONTAINER...] 删除容器
+
+docker ps [OPTIONS] 来查看我们正在运行的容器
+OPTIONS:
+  -a:显示所有容器
+  -s:显示容器所有文件大小
+  -l:查询最后一次创建的容器
+  
+docker port CONTAINER [PRIVATE_PORT[/PROTO]] 可以查看指定 （ID或者名字）容器的某个确定端口映射到宿主机的端口号
+
+docker logs [OPTIONS] CONTAINER 可以查看容器内部的标准输出
+OPTIONS:
+  -f:让 dokcer logs 像使用 tail -f 一样来输出容器内部的标准输出
+  
+docker inspect [OPTIONS] NAME|ID [NAME|ID...] 来查看Docker的底层信息，它会返回一个 JSON 文件记录着 Docker 容器的配置和状态信息
