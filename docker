@@ -1,12 +1,15 @@
 Docker:是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源
 
-容器：
-镜像：
+容器(container)：
+镜像(image)：
 仓库：
 
 
 Docker命令: （docker ~ --help 查看具体项）
-docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] Create a new image from a container's changes
+OPTIONS:
+  -m:指定提交的说明信息
+  -a:指定用户信息
 
 docker create [OPTIONS] IMAGE [COMMAND] [ARG...] 创建容器
 
