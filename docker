@@ -4,6 +4,14 @@ Docker:是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.
 镜像(images)：Docker 容器运行时的只读模板，每一个镜像由一系列的层 (layers) 组成
 仓库(registeries)：用来保存镜像，可以理解为代码控制中的代码仓库
 
+构建私有库
+docker run -p 5000:5000 -v /opt/data/registry:/tmp/registry registry
+标记一个本地镜像为私有仓库的版本
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+(e.g docker tag ubuntu:12.04 localhost:5000/ubuntu:1204)
+
+重启Docker服务
+restart docker
 
 Docker命令: （docker ~ --help 查看具体项）
 docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]] Create a new image from a container's changes
